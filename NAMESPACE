@@ -3,6 +3,7 @@
 export(LOAD.AND.PREP.GIS)
 export(hello)
 import(rgdal)
+import(sp)
 importFrom(rgeos,gBuffer)
 importFrom(rgeos,gIsValid)
 importFrom(rgeos,gUnaryUnion)

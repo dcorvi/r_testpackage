@@ -16,4 +16,9 @@ Suggests:
 VignetteBuilder: knitr
 Imports: 
     rgdal,
-    rgeos
+    rgeos,
+    sp,
+    parallel
+Depends:
+    R (>= 3.1.0)
+    

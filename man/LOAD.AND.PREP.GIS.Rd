@@ -12,15 +12,19 @@ LOAD.AND.PREP.GIS(SHPNAME, PROJECT.PATH = PROJECT.PATH,
 
 \item{PROJECT.PATH}{the filepath of the shapefile}
 
-\item{PROJ.USE}{the \code{\link{CRS}} projection of the shapefile}
+\item{PROJ.USE}{the \code{\link[rgdal]{CRS}} projection object of the shapefile}
 }
 \value{
 The output is a Large SpatialPolygon S4 object
 }
 \description{
-This function loads a shapefile and preps it so that it can be used in the function
+This function loads a shapefile and preps it so that it can be used to cut up rasters.
+****This needs to be updated to account for multi-part polygons
 }
 \examples{
-LOAD.AND.PREP.GIS("clipArea", "C:/Users/dennis.corvi/Documents/R/Projects", albersProj)
+LOAD.AND.PREP.GIS("East_Cst_cropped",
+    "C:/Users/dennis.corvi/Documents/R/Projects/east_cst_crop",
+    sp::CRS('+proj=aea +lat_1=28 +lat_2=42 +lat_0=40 +lon_0=-96 +x_0=0 +y_0=0 +datum=NAD83
+    +units=m +no_defs +ellps=GRS80 +towgs84=0,0,0 '))
 
 }
