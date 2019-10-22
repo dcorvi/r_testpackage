@@ -1,0 +1,21 @@
+---
+title: "test_vignette"
+author: "Dennis Corvi"
+date: "'r Sys.Date()'"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{This is my Vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(testpackage)
+```
